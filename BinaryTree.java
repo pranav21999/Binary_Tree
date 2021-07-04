@@ -33,6 +33,34 @@ public class BinaryTree {
 		bst.right = null;
 		return bst;
 	}
+	/*Search particular node is present or not 
+	 if present return true 
+	 else return false
+	 
+	 */
+	public boolean nodePresent(Node root, int val) {
+		if (root == null) {
+			return false;
+		}
+		Boolean isPresent = false;
+
+		while (root != null) {
+			if(val < root.data) {
+				root = root.left;
+			}
+			else if(val > root.data) {
+				root = root.right;
+			}
+			else {
+				isPresent = true;
+				System.out.println("Node is Present");
+				break;
+			}
+
+		}
+		return isPresent;
+	}
+
 
 	//method to print node 
 	public void print(Node root) {

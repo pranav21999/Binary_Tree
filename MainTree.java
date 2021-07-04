@@ -21,5 +21,11 @@ public class MainTree {
 		root = bst.insert(root, 63);
 		root = bst.insert(root, 67);
 		bst.print(root);
+		bst.print(root);
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter the node you want to search");
+		int search =sc.nextInt();
+		System.out.println(bst.nodePresent(root, search));
+		
 	}
 }
